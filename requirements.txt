@@ -1,0 +1,12 @@
+cffi
+cryptography
+enum34
+idna
+ndg-httpsclient
+ordereddict
+pyasn1
+pycrypto
+pyOpenSSL
+requests
+six
+urllib3
