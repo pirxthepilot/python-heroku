@@ -1,6 +1,8 @@
 # Heroku Module
 # For querying the Heroku API
 
+from __future__ import absolute_import, division, print_function
+
 import requests
 import urllib
 import json
@@ -36,7 +38,7 @@ class Heroku:
         except (requests.exceptions.ConnectionError,
                 requests.exceptions.Timeout,
                 requests.exceptions.TooManyRedirects) as e:
-            print 'requests error: ' + str(e)
+            print('requests error: ' + str(e))
             sys.exit(1)
         self.http_error_check(response)
         return response.json()
@@ -53,5 +55,5 @@ class Heroku:
         try:
             response.raise_for_status()
         except requests.exceptions.HTTPError as e:
-            print str(e)
+            print(str(e))
             sys.exit(1)
